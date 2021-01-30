@@ -1,0 +1,26 @@
+1. Crie a repositorio no github and clone no seu PC
+2. Entre no diretorio atravez do terminal.
+3. Crie um arquivo relativo a aplicação com o nome app.py
+4. Crie um arquivo com o nome Procfile que contenha a linha abaixo
+        web: sh setup.sh && streamlit run app.py
+
+5. Crie um arquivo com o nome requirements.txt e coloque o nome das libs python necessarias.
+6. Crie um arquivo com o nome setup.sh e cole o trexo de texto abaixo.
+
+
+mkdir -p ~/.streamlit/
+
+echo "\
+[server]\n\
+headless = true\n\
+port = $PORT\n\
+enableCORS = false\n\
+\n\
+" > ~/.streamlit/config.toml
+
+Procedimentos para deployment da app no heroku
+7. heroku login
+   heroku create
+   git add .
+   git commit -m "Some message"
+   git push heroku master
