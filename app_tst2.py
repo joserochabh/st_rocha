@@ -5,11 +5,7 @@ import time
 from streamlit_agraph import agraph, Node, Edge, Config
 import streamlit_theme as stt
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-    
-local_css('style.css')
+
 
 st.sidebar.title('Dashboard Menu XXX:')
 pag_selec = st.sidebar.selectbox('Opções Disponíveis', ['Estados', 'Cidades', 'Widgets', 'Graph', 'Mais Elementos'])

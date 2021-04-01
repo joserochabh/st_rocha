@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as stc
-
+import streamlit_theme as stt
 # File Processing Pkgs
 import pandas as pd
 import docx2txt
@@ -43,9 +43,9 @@ def load_image(image_file):
 
 def main():
 	st.title("File Upload Tutorial")
-
 	menu = ["Home","Dataset","DocumentFiles","About"]
 	choice = st.sidebar.selectbox("Menu",menu)
+	
 
 	if choice == "Home":
 		st.subheader("Home")
