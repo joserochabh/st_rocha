@@ -1,0 +1,47 @@
+streamlit run streamlit_components.py --server.port 8588
+streamlit run app_tst.py
+
+ 1499  conda create -n streamlit-n python=3.8
+ 1500  conda activate streamlit-n
+
+Theme: Copyar para .streamlit/config.toml
+[theme]
+primaryColor="#f63366"
+backgroundColor="#475060"
+secondaryBackgroundColor="#16161c"
+textColor="#fafafa"
+font="sans serif"
+
+========================
+joserochabh/streamlit-sqlite3
+
+Libs python instalados
+scikit-learn==0.22.2.post1
+streamlit==0.80.0
+streamlit-agraph==0.0.35
+streamlit-theme==0.58.0
+pandas==1.2.3
+pandocfilters==1.4.3
+spacy==2.3.2
+spicy==0.16.0
+PyPDF2==1.26.0
+fpdf==1.7.2
+Pillow==8.2.0
+docx==0.2.4
+openpyxl==3.0.7
+========================
+Docker compose
+No diretório local crie o docker-compose.yml.
+
+version: '2.4'
+services: 
+  streamlit:
+    image: joserochabh/streamlit01_streamlit
+    ports:
+      - '8501:8501'
+    volumes:
+      - './data:/usr/src/app/data:delegated'
+      - './project:/usr/src/app/project:delegated'
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
